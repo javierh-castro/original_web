@@ -59,7 +59,7 @@
     </header>
 
     <section id="projects">
-      <h1>Portafolio</h1>
+      <h1 class="h1">Portafolio</h1>
       <ul class="projects">
         <li class="card">
           <div class="picture">
@@ -238,7 +238,7 @@
         </ul>
       </div>
       <div class="habilidades">
-        <h1>Habilidades</h2>
+        <h1 class="h1">Habilidades</h1>
         <ul class="skills-list">
           <li>
             <picture class="icon">
@@ -306,10 +306,9 @@
     
     <section id="contact" class="contact">
       <form class="contact-form" name="contact" data-netlify="true" method="post">
-        <p>
+        <p class="input-field">
           <label for="name">Nombre</label>
           <input
-          class="campo"
           type="text"
           id="name"
           name="name"
@@ -317,10 +316,9 @@
           required
           />
         </p>
-        <p>
+        <p class="input-field">
           <label for="email">Email</label>
           <input
-          class="campo"
           type="email"
           id="email"
             name="email"
@@ -328,11 +326,11 @@
             required
           />
         </p>
-        <p class="block">
+        <p class="input-field">
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" placeholder="Ingrese tu mensaje" required></textarea>
         </p>
-        <p class="block">
+        <p>
           <button class="button-form" type="submit">Enviar</button>
         </p>
       </form>
