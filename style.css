@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Varela+Round&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;1,100&display=swap");
 
 * {
   margin: 0;
@@ -32,11 +32,12 @@ header {
 }
 
 .nav {
-  background-color: #012a4a;/* rgb(35, 64, 128); */
+  background-color: #012a4a;
+  /* background-color: linear-gradient(45deg, #1b4332 10%, #2d6a4f 30%, #0b2553 60%); */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 70px;
+  padding: 17px 70px;
   font-size: 18px;
   width: 100%;
   transition: all 0.5s ease;
@@ -91,12 +92,24 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
-  padding: 10px 70px;
+  /* padding: 10px 70px; */
 }
 
 .nav.active li a:hover {
   background: #2d6a4f;
   color: #fff;
+}
+
+/*--------------------------*/
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  /* line-height: 60px; */
+  cursor: pointer;
+
+  display: none;
 }
 
 .contact-button {
@@ -112,7 +125,9 @@ header {
   text-decoration: none;
 }
 
-.contact-button:hover {background: #0b7dda;}
+.contact-button:hover {
+  background: #0b7dda;
+}
 
 .home {
   padding-top: 200px;
@@ -125,8 +140,8 @@ header {
 .titulo {
   width: 380px;
 }
-.titulo h2{
-  font-family: 'Raleway', sans-serif;
+.titulo h2 {
+  font-family: "Raleway", sans-serif;
   font-size: 32px;
 }
 
@@ -139,17 +154,17 @@ header {
   text-shadow: 0 0 8px #fff, 0 0 25px #fff, 0 0 40px #f3f3f39d;
 }
 
-.links-perfil a{
+.links-perfil a {
   font-size: 25px;
   color: #f1ebeb;
 }
 
-.github{
-animation: parpadear 5s infinite backwards steps(3);
+.github {
+  animation: parpadear 5s infinite backwards steps(3);
 }
 
-.linkedin{
-animation: parpadear 7.5s infinite backwards steps(4);
+.linkedin {
+  animation: parpadear 7.5s infinite backwards steps(4);
 }
 
 .cv {
@@ -158,10 +173,10 @@ animation: parpadear 7.5s infinite backwards steps(4);
 }
 
 @keyframes parpadear {
-to {
-  color: gray;
-text-shadow: none;
- }
+  to {
+    color: gray;
+    text-shadow: none;
+  }
 }
 
 @keyframes wobble-horizontal-bottom {
@@ -193,7 +208,7 @@ text-shadow: none;
   height: 100vh;
 }
 
-.h1 {
+.h1-projects {
   text-align: center;
   font-size: 40px;
   padding: 20px 0px;
@@ -253,7 +268,7 @@ text-shadow: none;
 
 .description a {
   padding: 4px 13px;
-  background: #1b4332;/* rgb(47, 184, 127); */
+  background: #1b4332;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -262,6 +277,15 @@ text-shadow: none;
 }
 
 /*-----------------------------------------------------*/
+.responsive {
+  display: none;
+}
+
+.no-responsive {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px 0px;
+}
 
 .skills {
   height: 100vh;
@@ -306,112 +330,6 @@ text-shadow: none;
   object-fit: cover;
 }
 
-@media (max-width: 760px) {
-  .projects {
-    padding: 0px 60px;
-  }
-}
-
-@media (max-width: 700px) {
-  .nav {
-    background-color: rgb(35, 64, 128);
-    padding: 20px 14px;
-  }
-
-  .titulo {
-    width: 300px;
-  } 
-
-  .titulo h2{
-    display: flex;
-    justify-content: center;
-    font-size: 22px;
-  }
-
-  .contact-button {
-    padding: 15px 5px;
-  }
-
-  .projects {
-    gap: 10px;
-    padding: 0px 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .card {
-    font-size: 11px;
-    width: 100%;
-    height: 95px;
-  }
-  .picture {
-    width: 45%;
-    height: 98px;
-  }
-
-  /**/
-  .skills {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    height: 950px;
-    padding: 0px 30px;
-  }
-
-  .skills-text {
-    width: 80% !important;
-    margin-top: 200px;
-    font-size: 14px;
-    width: 100%;
-  }
-
-  .habilidades {
-    height: 60%;
-    width: 90%;
-  }
-  .skills-list li {
-    display: flex;
-    gap: 20px;
-  }
-
-  .icon img {
-    height: 40px;
-  }
-
-  /**/
-  .contact {
-    flex-wrap: wrap-reverse;
-    height: 750px !important;
-    width: 100%;
-    padding: 0px !important;
-  }
-
-  .contact-form {
-    width: 70% !important;
-  }
-
-  .referenced {
-    margin-left: 0px !important;
-    width: 70% !important;
-    height: 40% !important;
-    font-size: 13px;
-  }
-
-  .referenced h2{
-    margin-bottom: 30px !important;
-  }
-
-  .button-form {
-    width: 120px !important;
-  }
-
-  footer {
-    height: 5vh !important;
-  }
-}
-
 /*-----------------------------------------------------*/
 
 .contact {
@@ -428,7 +346,7 @@ text-shadow: none;
   height: 350px;
   padding: 0px 15px;
 }
-.referenced h2{
+.referenced h2 {
   display: flex;
   justify-content: center;
   font-size: 40px;
@@ -471,7 +389,9 @@ text-shadow: none;
   width: 150px;
   border-radius: 10px;
 }
-.button-form:hover {background: #0b7dda;}
+.button-form:hover {
+  background: #0b7dda;
+}
 
 .contact-form p {
   margin: 0;
@@ -479,7 +399,6 @@ text-shadow: none;
   display: flex;
   flex-direction: column;
 }
-
 
 footer {
   display: flex;
@@ -492,4 +411,174 @@ footer {
   gap: 20px;
   display: flex;
   font-size: 27px;
+}
+
+
+
+@media (max-width: 760px) {
+  /*-------------------Home-------------------*/
+  .nav {
+    padding: 10px 15px;
+    height: 60px;
+  }
+
+  .contact-button {
+    padding: 5px 10px;
+    margin-right: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #262d35;
+    align-items: center;
+    position: fixed;
+    /* right: 0; */
+    top: 80px;
+    width: 100%;
+    padding: 20px 0px;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    right: 100%;
+    transition: right 0.3s;
+  }
+
+  .nav-links li {
+    line-height: 70px;
+  }
+
+  .nav-links li a:hover,
+  .nav-link-active {
+    background: none;
+    color: #83c5f7;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    /* left: 0; */
+    right: 0;
+  }
+
+  .nav.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+  }
+
+  .nav.active .nav-links {
+    height: 800px;
+    color: #fff;
+  }
+
+  .nav.active .nav-links li a:hover {
+    background: none;
+    color: #83c5f7;
+  }
+
+  /*-------------------Portafolio-------------------*/
+
+  .titulo {
+    width: 300px;
+  }
+
+  .titulo h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .projects {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    font-size: 11px;
+    width: 100%;
+    height: 95px;
+  }
+  .picture {
+    width: 45%;
+    height: 98px;
+  }
+
+  /*-------------------skills-------------------*/
+
+  .responsive {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 30px 0;
+  }
+
+  .no-responsive {
+    display: none;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 950px;
+    padding: 0px 30px;
+  }
+
+  .skills-text {
+    width: 80% !important;
+    margin-top: 200px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .habilidades {
+    margin-top: 80px;
+    height: 60%;
+    width: 90%;
+  }
+  .skills-list li {
+    display: flex;
+    gap: 20px;
+  }
+
+  .icon img {
+    height: 40px;
+  }
+
+  /*-------------------contact-------------------*/
+  .contact {
+    flex-wrap: wrap-reverse;
+    height: 750px !important;
+    width: 100%;
+    padding: 0px !important;
+  }
+
+  .contact-form {
+    width: 70% !important;
+  }
+
+  .referenced {
+    margin-left: 0px !important;
+    width: 70% !important;
+    height: 40% !important;
+    font-size: 13px;
+  }
+
+  .referenced h2 {
+    margin-bottom: 30px !important;
+  }
+
+  .button-form {
+    width: 120px !important;
+  }
+
+  footer {
+    height: 5vh !important;
+  }
 }

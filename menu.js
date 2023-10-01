@@ -1,7 +1,26 @@
-const nav = document.querySelector(".nav");
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-links");
+const Contact = document.querySelector(".contact-button");
+const Navar = document.querySelector(".nav-links");
 
 window.addEventListener("scroll", function () {
-  nav.classList.toggle("active", window.scrollY > 0);
+  var header = document.querySelector(".nav");
+  // nav.classList.toggle("active", window.scrollY > 0);
+  header.classList.toggle("active", window.scrollY > 0);
+});
+
+Navar.addEventListener("click", () => {
+  navMenu.classList.toggle("nav-menu_visible");
+});
+
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("nav-menu_visible");
+
+  if (navMenu.classList.contains("nav-menu_visible")) {
+    navToggle.setAttribute("aria-label", "Cerrar menú");
+  } else {
+    navToggle.setAttribute("aria-label", "Abrir menú");
+  }
 });
 
 
